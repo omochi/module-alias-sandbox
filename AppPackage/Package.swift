@@ -8,6 +8,7 @@ let package = Package(
         .package(path: "../LibPackage"),
     ],
     targets: [
+        .target(name: "Lib"),
         .executableTarget(
             name: "App",
             dependencies: [
@@ -18,6 +19,8 @@ let package = Package(
                         "Lib": "LibAlias",
                     ]
                 ),
+                // ↓をコメントアウトするとエラーになります。
+                .target(name: "Lib")
             ]
         ),
     ],

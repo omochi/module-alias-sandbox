@@ -1,4 +1,4 @@
 import LibAlias
 
-let obj = LibAlias.Lib(name: "Module Alias")
+let obj = LibAlias.Lib()
 print(obj.message())
